@@ -700,3 +700,12 @@ body {
 .modal .form-checkbox:checked ~ .checkbox > .checkbox-uncheck {
 	opacity: 0;
 }
+
+/*
+		PORTFOLIO PAGE
+*/
+
+.portfolio-wrapper {
+	padding-top: 48px;
+	padding-bottom: 48px;
+}
