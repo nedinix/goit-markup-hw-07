@@ -476,3 +476,227 @@ body {
 	margin-left: 16px;
 	fill: var(--background);
 }
+
+/* 
+		MODAL WINDOW
+*/
+
+.backdrop {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	/* padding-top: 96px;
+	padding-left: 18px;
+	padding-right: 18px; */
+
+	background-color: var(--modal-overlay);
+
+	opacity: 1;
+	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+	opacity: 0;
+	pointer-events: none;
+	visibility: hidden;
+}
+
+.backdrop.is-hidden .modal {
+	transform: translate(-50%, -50%) scale(0.5);
+	opacity: 0;
+}
+
+.modal {
+	width: calc(100% - 32px);
+	max-width: 428px;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	padding-left: 16px;
+	padding-right: 16px;
+
+	background: var(--modal-background);
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+
+	transform: translate(-50%, -50%) scale(1);
+	opacity: 1;
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-modal {
+	display: block;
+	margin-left: auto;
+	margin-bottom: 24px;
+	width: 24px;
+	height: 24px;
+
+	background-color: var(--accent-color);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 50%;
+	cursor: pointer;
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-modal:hover,
+.btn-modal:active {
+	background-color: var(--pressed-state);
+	fill: var(--background);
+	border: none;
+	border-radius: 50%;
+}
+
+.modal-form {
+	display: flex;
+	flex-direction: column;
+	font-family: inherit;
+
+	font-weight: 400;
+	font-size: 12px;
+}
+
+.modal-header {
+	margin-bottom: 16px;
+
+	font-family: inherit;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	text-align: center;
+	letter-spacing: 0.02em;
+	color: var(--dark-color);
+}
+
+.modal .form-field {
+	position: relative;
+	margin-bottom: 8px;
+}
+
+.modal .form-field:last-of-type {
+	margin-bottom: 24px;
+}
+
+.modal .form-icon {
+	position: absolute;
+	left: 16px;
+	top: 14px;
+	display: flex;
+
+	fill: var(--dark-color);
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal .form-icon .icon {
+	display: inline-block;
+}
+
+.modal .form-field:focus-within .form-icon {
+	fill: var(--primary-brand);
+}
+
+.modal .form-input,
+.modal .form-area {
+	width: 100%;
+
+	background-color: transparent;
+	border-radius: 4px;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	outline: unset;
+	transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal .form-input:focus,
+.modal .form-area:focus {
+	outline: 1px solid var(--primary-brand);
+	outline-offset: -1px;
+}
+
+.modal .form-label {
+	display: inline-block;
+	margin-bottom: 4px;
+
+	line-height: 1.17;
+	letter-spacing: 0.01em;
+	color: var(--subtle-text-color);
+}
+
+.modal .form-input {
+	line-height: 2;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 38px;
+	color: var(--dark-color);
+}
+
+.modal .form-area {
+	resize: none;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 16px;
+
+	font-family: inherit;
+	font-size: inherit;
+	line-height: 1.33;
+	letter-spacing: 0.04em;
+	color: var(--dark-color);
+}
+
+.modal .form-area::placeholder {
+	font-size: 12px;
+	line-height: 1.33;
+	color: rgba(117, 117, 117, 0.5);
+}
+
+.modal .form-area:focus::placeholder {
+	color: transparent;
+}
+
+.modal .privacy-policy {
+	display: inline-flex;
+}
+
+.modal .text-policy {
+	user-select: none;
+
+	margin-left: 8px;
+	line-height: 1.33;
+	letter-spacing: 0.04em;
+	color: #757575;
+}
+
+.modal .text-policy .link {
+	text-decoration: revert;
+	color: var(--primary-brand);
+}
+
+.modal .text-policy .link:hover,
+.modal .text-policy .link:focus {
+	color: var(--text-color);
+}
+
+.modal .form-field input[type="checkbox"] {
+	appearance: none;
+}
+
+/* checkbox */
+
+.checkbox-check {
+	opacity: 0;
+	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal .form-checkbox:checked ~ .checkbox > .checkbox-check {
+	opacity: 1;
+}
+
+.modal .form-checkbox:checked ~ .checkbox > .checkbox-uncheck {
+	opacity: 0;
+}
