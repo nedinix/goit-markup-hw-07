@@ -283,6 +283,25 @@ body {
 	margin-bottom: 72px;
 }
 
+@media screen and (min-width: 768px) {
+	.hero-section {
+		height: 436px;
+	}
+
+	.hero-section .container {
+		padding-bottom: 108px;
+	}
+
+	.hero-header {
+		font-size: 56px;
+		line-height: 1.07;
+	}
+
+	.hero-section .hero-header {
+		margin-bottom: 40px;
+	}
+}
+
 /* 
 		FEATURES-SECTION
 */
