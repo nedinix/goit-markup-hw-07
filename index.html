@@ -20,11 +20,20 @@
 	<body>
 		<header class="page-header">
 			<div class="container">
-				<div class="nav-block logo-wrapper">
-					<a class="logo" href="index.html"><span class="logo-accent">Web</span>Studio</a>
-				</div>
-
+				<!-- <div class="page-mobile-menu"> </div> -->
 				<nav class="nav-wrapper">
+					<div class="logo-wrapper">
+						<a class="logo" href="index.html"><span class="logo-accent">Web</span>Studio</a>
+					</div>
+
+					<!-- mobile menu -->
+					<button type="button" class="button-hamburger-menu" aria-label="mobile menu toogle">
+						<svg width="32" height="22">
+							<use href="./images/icons.svg#icon-hamburger-menu"></use>
+							<!-- <use href="./images/icons.svg#icon-close-btn"></use> -->
+						</svg>
+					</button>
+
 					<ul class="nav-block">
 						<li class="item active">
 							<a class="nav-link" href="./index.html" rel="">Studio</a>
@@ -36,22 +45,45 @@
 							<a class="nav-link" href="" rel="">Contacts</a>
 						</li>
 					</ul>
-
-					<!-- mobile menu -->
-					<!-- <button type="button">
-						<svg>
-							<use href="./images/icons.svg#icon-hamburger-menu"></use>
-						</svg>
-					</button> -->
+					<ul class="contact-block">
+						<li class="item">
+							<a class="contact-link" href="mailto:info@devstudio.com" rel="">info@devstudio.com</a>
+						</li>
+						<li class="item">
+							<a class="contact-link tel" href="tel:+110001111111" rel="">+11 (000) 111-11-11</a>
+						</li>
+					</ul>
+					<ul class="social-links">
+						<li class="icon-box">
+							<a class="link" href="">
+								<svg class="icon" width="24" height="24">
+									<use href="./images/icons.svg#icon-instagram"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="icon-box">
+							<a class="link" href="">
+								<svg class="icon" width="24" height="24">
+									<use href="./images/icons.svg#icon-twitter"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="icon-box">
+							<a class="link" href="">
+								<svg class="icon" width="24" height="24">
+									<use href="./images/icons.svg#icon-facebook"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="icon-box">
+							<a class="link" href="">
+								<svg class="icon" width="24" height="24">
+									<use href="./images/icons.svg#icon-linkedin"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
 				</nav>
-				<ul class="contact-block">
-					<li class="item">
-						<a class="contact-link" href="mailto:info@devstudio.com" rel="">info@devstudio.com</a>
-					</li>
-					<li class="item">
-						<a class="contact-link" href="tel:+110001111111" rel="">+11 (000) 111-11-11</a>
-					</li>
-				</ul>
 			</div>
 		</header>
 
@@ -414,7 +446,7 @@
 		<div class="backdrop is-hidden" data-modal>
 			<!-- is-hidden -->
 			<div class="modal">
-				<button class="btn-modal" data-modal-close>
+				<button class="btn-close" data-modal-close>
 					<svg width="8" height="8">
 						<use href="./images/icons.svg#icon-close-btn"></use>
 					</svg>
