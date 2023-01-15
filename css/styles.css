@@ -44,6 +44,10 @@ body {
 	margin-left: auto;
 }
 
+body.modal-open {
+	overflow: hidden;
+}
+
 @media screen and (min-width: 768px) {
 	.container {
 		max-width: 768px;
@@ -975,7 +979,7 @@ body {
 	}
 
 	.footer-block:first-of-type {
-		width: 264px;
+		max-width: 264px;
 		margin-right: 120px;
 	}
 
