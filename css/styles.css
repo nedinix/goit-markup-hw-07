@@ -1051,6 +1051,11 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+	.backdrop {
+		padding: 0;
+		/* padding-top: 96px; */
+	}
+
 	.modal {
 		position: absolute;
 		top: 50%;
@@ -1376,6 +1381,7 @@ body {
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
+		row-gap: 48px;
 
 		padding-top: 64px;
 		padding-bottom: 96px;
@@ -1389,5 +1395,19 @@ body {
 
 	.gallery-item {
 		flex-basis: calc(100% / 2);
+	}
+
+	.gallery-block:not(:last-of-type) {
+		margin-bottom: 0;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.gallery-wrapper {
+		padding-top: 72px;
+		padding-bottom: 120px;
+	}
+	.filter-btn-wrapper {
+		padding-top: 96px;
 	}
 }
