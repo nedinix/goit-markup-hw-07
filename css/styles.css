@@ -467,16 +467,26 @@ body.modal-open {
 	visibility: visible;
 	pointer-events: initial;
 	transform: translateY(0);
+
+	overflow-y: auto;
 }
 
 .mobile-menu {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	/* justify-content: space-between; */
+	/* flex-basis: 50%; */
+	row-gap: 40px;
 	margin-right: auto;
 	margin-left: auto;
 	max-width: 428px;
-	height: calc(100vh - 120px);
+	/* height: auto; */
+	/* height: calc(100%-24px); */
+	height: calc(100vh - 40px);
+}
+
+.mobile-menu > .mobile-menu-block {
+	flex-grow: 1;
 }
 
 .mobile-menu-block,
@@ -1216,7 +1226,7 @@ body.modal-open {
 .modal .text-policy {
 	user-select: none;
 
-	margin-left: 8px;
+	/* margin-left: 8px; */
 	line-height: 1.33;
 	letter-spacing: 0.04em;
 	color: #757575;
@@ -1237,6 +1247,10 @@ body.modal-open {
 }
 
 /* checkbox */
+
+.checkbox {
+	margin-right: 8px;
+}
 
 .checkbox-check {
 	opacity: 0;
