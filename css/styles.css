@@ -590,20 +590,20 @@ body.modal-open {
 	background-position: center;
 	background-size: cover;
 	background-image: linear-gradient(to right, var(--hero-background), var(--hero-background)),
-		url(../images/hero-bg-mob.jpg);
+		url(../images/hero-bg-mob-428.jpg);
 }
 
 @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
 	.hero-section {
 		background-image: linear-gradient(to right, var(--hero-background), var(--hero-background)),
-			url(../images/hero-bg-mob@2x.jpg);
+			url(../images/hero-bg-mob-428@2x.jpg);
 	}
 }
 
 @media screen and (min-width: 429px) {
 	.hero-section {
 		background-image: linear-gradient(to right, var(--hero-background), var(--hero-background)),
-			url(../images/hero-bg-tab.jpg);
+			url(../images/hero-bg-tab-768.jpg);
 	}
 }
 
@@ -612,14 +612,14 @@ body.modal-open {
 	(min-width: 429px) and (min-resolution: 2dppx) {
 	.hero-section {
 		background-image: linear-gradient(to right, var(--hero-background), var(--hero-background)),
-			url(../images/hero-bg-tab@2x.jpg);
+			url(../images/hero-bg-tab-768@2x.jpg);
 	}
 }
 
 @media screen and (min-width: 769px) {
 	.hero-section {
 		background-image: linear-gradient(to right, var(--hero-background), var(--hero-background)),
-			url(../images/hero-bg-desk.jpg);
+			url(../images/hero-bg-desk-1440.jpg);
 	}
 }
 
@@ -628,7 +628,7 @@ body.modal-open {
 	(min-width: 769px) and (min-resolution: 2dppx) {
 	.hero-section {
 		background-image: linear-gradient(to right, var(--hero-background), var(--hero-background)),
-			url(../images/hero-bg-desk@2x.jpg);
+			url(../images/hero-bg-desk-1440@2x.jpg);
 	}
 }
 
@@ -694,15 +694,15 @@ body.modal-open {
 }
 
 /* 
-		WORKS-SECTION
+		PRODUCTS-SECTION
 */
 
-.works.section {
+.products.section {
 	display: none;
 }
 
 @media screen and (min-width: 1200px) {
-	.works.section {
+	.products.section {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
