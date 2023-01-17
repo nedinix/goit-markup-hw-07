@@ -1,4 +1,11 @@
 :root {
+	/* font style */
+
+	--font-body: "Roboto", sans-serif;
+	--font-logo: "Raleway", sans-serif;
+
+	/* colors */
+
 	--background: #ffffff;
 
 	--primary-brand: #4d5ae5;
@@ -16,6 +23,10 @@
 	--modal-overlay: rgba(46, 47, 66, 0.4);
 	--modal-background: #fcfcfc;
 	--hero-background: rgba(46, 47, 66, 0.7);
+
+	/* animation */
+
+	--animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 *,
@@ -27,7 +38,7 @@
 }
 
 body {
-	font-family: "Roboto", sans-serif;
+	font-family: var(--font-body);
 	color: var(--text-color);
 	font-size: 16px;
 	line-height: 1.5;
@@ -91,7 +102,7 @@ body.modal-open {
 .logo {
 	display: block;
 
-	font-family: "Raleway", sans-serif;
+	font-family: var(--font-logo);
 	text-transform: uppercase;
 	font-size: 18px;
 	font-weight: 800;
@@ -246,8 +257,7 @@ body.modal-open {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	cursor: pointer;
 
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-		opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color var(--animation), box-shadow var(--animation), opacity var(--animation);
 }
 
 .primary-button:hover,
@@ -299,7 +309,7 @@ body.modal-open {
 
 .nav-link {
 	color: var(--dark-color);
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--animation);
 }
 
 .nav-block .item.active .nav-link {
@@ -313,7 +323,7 @@ body.modal-open {
 
 .contact-link {
 	color: var(--text-color);
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--animation);
 }
 
 .nav-link:active,
@@ -469,7 +479,7 @@ body.modal-open {
 	visibility: hidden;
 	pointer-events: none;
 	transform: translateY(100%);
-	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: transform var(--animation);
 }
 
 .menu-container.is-open {
@@ -522,7 +532,7 @@ body.modal-open {
 .mobile-contact-link {
 	display: block;
 	text-decoration: none;
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--animation);
 }
 
 .mobile-menu-link {
@@ -780,8 +790,7 @@ body.modal-open {
 	border-radius: 4px;
 	fill: var(--subtle-text-color);
 
-	transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-		box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: border-color var(--animation), fill var(--animation), box-shadow var(--animation);
 }
 
 .customers .item:hover,
@@ -870,8 +879,7 @@ body.modal-open {
 	background-color: rgba(255, 255, 255, 0.1);
 	border-radius: 50%;
 
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-		box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--animation), background-color var(--animation), box-shadow var(--animation);
 }
 
 .footer .icon-box:hover,
@@ -907,7 +915,7 @@ body.modal-open {
 	border-radius: 4px;
 	outline: unset;
 
-	transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: border var(--animation), box-shadow var(--animation);
 }
 
 .footer .subscribe-field::placeholder {
@@ -918,7 +926,7 @@ body.modal-open {
 	letter-spacing: 0.04em;
 	color: rgba(255, 255, 255, 0.6);
 
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--animation);
 }
 
 .footer .subscribe-field:focus {
@@ -945,7 +953,7 @@ body.modal-open {
 	border-radius: 4px;
 	cursor: pointer;
 
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color var(--animation), color var(--animation);
 }
 
 .subscribe-button:hover,
@@ -1076,7 +1084,7 @@ body.modal-open {
 	background-color: var(--modal-overlay);
 
 	opacity: 1;
-	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: opacity var(--animation);
 
 	overflow-y: auto;
 }
@@ -1110,7 +1118,7 @@ body.modal-open {
 	border-radius: 4px;
 
 	opacity: 1;
-	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: opacity var(--animation);
 }
 
 @media screen and (min-width: 768px) {
@@ -1131,7 +1139,7 @@ body.modal-open {
 		padding-right: 24px;
 
 		transform: translate(-50%, -50%) scale(1);
-		transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+		transition: transform var(--animation);
 	}
 }
 
@@ -1146,7 +1154,7 @@ body.modal-open {
 	border-radius: 50%;
 	cursor: pointer;
 
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color var(--animation), box-shadow var(--animation);
 }
 
 .btn-close:hover,
@@ -1198,7 +1206,7 @@ body.modal-open {
 	display: flex;
 
 	fill: var(--dark-color);
-	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: fill var(--animation);
 }
 
 .modal .form-icon .icon {
@@ -1217,7 +1225,7 @@ body.modal-open {
 	border-radius: 4px;
 	border: 1px solid rgba(33, 33, 33, 0.2);
 	outline: unset;
-	transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: outline var(--animation);
 }
 
 .modal .form-input:focus,
@@ -1303,7 +1311,7 @@ body.modal-open {
 
 .checkbox-check {
 	opacity: 0;
-	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: opacity var(--animation);
 }
 
 .modal .form-checkbox:checked ~ .checkbox > .checkbox-check {
@@ -1344,8 +1352,8 @@ body.modal-open {
 	border-radius: 4px;
 	cursor: pointer;
 
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-		box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--animation), background-color var(--animation), box-shadow var(--animation),
+		border var(--animation);
 }
 
 .filter-btn:hover,
@@ -1372,7 +1380,7 @@ body.modal-open {
 	display: block;
 
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: box-shadow var(--animation);
 }
 
 .gallery-block:not(:last-of-type) {
@@ -1391,7 +1399,9 @@ body.modal-open {
 
 .gallery-image {
 	display: block;
-	width: 100%; /* change */
+	max-width: 100%;
+	width: auto;
+	height: auto;
 }
 
 .gallery-overlay {
@@ -1409,7 +1419,7 @@ body.modal-open {
 	background-color: var(--primary-brand);
 
 	transform: translateY(100%);
-	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: transform var(--animation);
 }
 
 .gallery-item:hover .gallery-overlay,
@@ -1444,6 +1454,10 @@ body.modal-open {
 }
 
 @media screen and (min-width: 768px) {
+	.filter-btn {
+		padding: 12px 24px;
+	}
+
 	.gallery-wrapper {
 		display: flex;
 		justify-content: space-between;
