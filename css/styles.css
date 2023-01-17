@@ -764,17 +764,22 @@ body.modal-open {
 .customers .content-wrapper {
 	display: flex;
 	flex-wrap: wrap;
-	flex-direction: column;
-	align-items: center;
+	justify-content: center;
 	row-gap: 72px;
-	column-gap: 12px;
+	column-gap: 16px;
 }
 
 .customers .item {
-	display: inline-flex;
-	width: 190px;
-	height: 88px;
-	padding: 16px 32px;
+	display: block;
+	max-width: 190px;
+}
+
+.customers .link {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding-top: 16px;
+	padding-bottom: 16px;
 
 	border: 1px solid var(--subtle-text-color);
 	border-radius: 4px;
@@ -783,38 +788,28 @@ body.modal-open {
 	transition: border-color var(--animation), fill var(--animation), box-shadow var(--animation);
 }
 
-.customers .item:hover,
-.customers .item:focus {
+.customers .link:hover,
+.customers .link:focus {
 	border: 1px solid var(--primary-brand);
 	fill: var(--primary-brand);
 }
 
-.customers .link {
-	display: block;
-}
-
 .customers .icon {
-	display: inline-block;
+	display: block;
 	fill: inherit;
+	height: 56px;
 	width: 100%;
-	height: 100%;
 }
 
 @media screen and (min-width: 768px) {
 	.customers .content-wrapper {
-		flex-direction: unset;
 		column-gap: 24px;
-	}
-
-	.customers .item {
-		max-width: 168px;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	.customers .content-wrapper {
 		flex-wrap: nowrap;
-		column-gap: 24px;
 	}
 }
 
