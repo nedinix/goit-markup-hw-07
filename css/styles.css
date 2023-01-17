@@ -540,10 +540,16 @@ body.modal-open {
 
 .mobile-contact-link.tel {
 	margin-bottom: 40px;
-
-	font-size: 36px;
+	font-size: 24px;
+	/* font-size: 36px; */
 	line-height: 1.11;
 	color: var(--primary-brand);
+}
+
+@media screen and (min-width: 425px) {
+	.mobile-contact-link.tel {
+		font-size: 36px;
+	}
 }
 
 .mobile-menu-link.active {
@@ -825,11 +831,6 @@ body.modal-open {
 	background-color: var(--dark-color);
 }
 
-.footer-block {
-	padding-left: 64px;
-	padding-right: 64px;
-}
-
 .footer-block:not(:last-of-type) {
 	margin-bottom: 72px;
 }
@@ -851,6 +852,13 @@ body.modal-open {
 	letter-spacing: 0.02em;
 	text-align: center;
 	color: var(--background);
+}
+
+.footer-block-description {
+	display: block;
+	max-width: 268px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .footer .social-links {
@@ -955,6 +963,13 @@ body.modal-open {
 	margin-left: 16px;
 	fill: var(--background);
 }
+/* 
+@media screen and (min-width: 480px) {
+	.footer-block-description {
+		width: 100%;
+		margin: 0;
+	}
+} */
 
 @media screen and (min-width: 768px) {
 	.footer .container {
@@ -1090,9 +1105,6 @@ body.modal-open {
 	margin-left: auto;
 	margin-right: auto;
 
-	/* position: absolute;
-	top: 50%;
-	left: 50%; */
 	padding-top: 24px;
 	padding-bottom: 24px;
 	padding-left: 16px;
@@ -1108,25 +1120,29 @@ body.modal-open {
 
 @media screen and (min-width: 768px) {
 	.backdrop {
-		padding: 0;
-		/* padding-top: 96px; */
+		padding-top: 96px;
 	}
 
 	.modal {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-
 		max-width: 408px;
 		padding-top: 24px;
 		padding-bottom: 24px;
 		padding-left: 24px;
 		padding-right: 24px;
-
-		transform: translate(-50%, -50%) scale(1);
-		transition: transform var(--animation);
 	}
 }
+/* 
+@media screen and (min-width: 1200px) {
+	.backdrop {
+		padding: 0;
+	}
+	 
+	.modal {
+		transform: translateY(50%) scale(1);
+
+		transition: transform var(--animation);
+	} 
+} */
 
 .btn-close {
 	display: block;
