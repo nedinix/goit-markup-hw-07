@@ -387,8 +387,7 @@ body.modal-open {
 	}
 
 	.contact-block .item,
-	.contact-link,
-	.contact-link.tel {
+	.contact-link {
 		font-size: 12px;
 		line-height: 1.33;
 		letter-spacing: 0.04em;
@@ -432,8 +431,7 @@ body.modal-open {
 		margin-bottom: 0;
 	}
 
-	.contact-link,
-	.contact-link.tel {
+	.contact-link {
 		font-size: 16px;
 		line-height: 1.5;
 		color: var(--text-color);
@@ -459,10 +457,6 @@ body.modal-open {
 /* mobile menu */
 
 .menu-container {
-	/* display: flex;
-	flex-direction: column;
-	margin-right: auto;
-	margin-left: auto; */
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -502,10 +496,6 @@ body.modal-open {
 	display: flex;
 	flex-direction: column;
 }
-
-/* .mobile-menu > .mobile-menu-block {
-	flex-grow: 1;
-} */
 
 .mobile-menu-block,
 .mobile-contact-block {
