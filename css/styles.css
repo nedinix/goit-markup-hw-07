@@ -1278,16 +1278,18 @@ body.modal-open {
 }
 
 .modal .privacy-policy {
-	display: inline-flex;
+	display: flex;
+	align-items: center;
 }
 
 .modal .text-policy {
-	user-select: none;
+	padding-left: 24px;
 
-	/* margin-left: 8px; */
 	line-height: 1.33;
 	letter-spacing: 0.04em;
 	color: #757575;
+
+	user-select: none;
 }
 
 .modal .text-policy .link {
@@ -1306,8 +1308,14 @@ body.modal-open {
 
 /* checkbox */
 
+.checkbox-wrapper {
+	position: relative;
+}
+
 .checkbox {
-	margin-right: 8px;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 .checkbox-check {
